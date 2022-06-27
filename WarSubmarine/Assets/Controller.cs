@@ -17,10 +17,11 @@ InputAction turnInputAction;
 private float TurnInput;
 private float SpeedInput;
 private float RiseInput;
-private float m_Turn;
-private float m_Speed;
-private float m_Rise;
+public float m_Turn;
+public float m_Speed;
+public float m_Rise;
 private float RotationFix;
+private float StablizeSoot
 
 private float SpeedSensitivity;
 private float RiseSensitivity;
@@ -98,7 +99,9 @@ private float TurnSensitivity;
 
         m_Rigidbody.AddForce(transform.up * m_Rise);
     }
+    void StablizeMethod(){
 
+    }
     
     void Update(){
     InputToTransform();
@@ -108,6 +111,7 @@ private float TurnSensitivity;
 
     void FixedUpdate()
     {  
+    StablizeMethod();
      ForwardTransform();
      TurnTransform();
     RiseTransform();
